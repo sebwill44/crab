@@ -1,0 +1,14 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[package]
+name = "crab"
+version = "0.1.1"
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.2.4", features = ["desktop"] }
+hound = "3.4.0"
+
+# Scripts - https://github.com/JoshMcguigan/cargo-run-script
+[package.metadata.scripts]
+clean = "rm sine.wav; rm sine.wav.asd;"
+run_dev = "cargo run-script clean; cargo run"
